@@ -35,4 +35,23 @@ contains
 
   end subroutine my_semi_opaque_print
 
+  !----------------------------------------------------------------------------
+
+  subroutine is_equal(a, b)
+    type (my_semi_opaque_t) :: a, b
+
+    if (a%idata .eq. b%idata) then
+      print *, " same idata", a%idata, b%idata
+    else
+      print *, " different idata", a%idata, b%idata
+    end if
+
+    if (a%ndata .eq. b%ndata) then
+      print *, " same ndata", a%ndata, b%ndata
+    else
+      print *, " different ndata", a%ndata, b%ndata
+    end if
+
+  end subroutine is_equal
+
 end module my_semi_opaque_type
