@@ -6,7 +6,8 @@ program problem1
 
   real, allocatable :: a(:)
 
-  a(:) = [ 1.0, 2.0, 3.0 ]
+  allocate(a(1:3))
+  a = [ 1.0, 2.0, 3.0 ]
 
   print *, "Status ", allocated(a)
   print *, "Values ", a(:)
